@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-umi",
+  "globals": {
+    "wx": true,
+    "container": true
+  }
+}

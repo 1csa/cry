@@ -1,0 +1,79 @@
+.dashboard {
+
+  &-title {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &-title h3 {
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  &-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px #bbbbbb;
+
+    &-screen {
+      display: flex;
+      align-items: baseline;
+    }
+
+    &-screen>label{
+      font-size: 16px;
+      margin-right: 10px;
+      color: rgba(0, 0, 0, 0.85);
+      width: 50px;
+    }
+  }
+
+  &-container h3 {
+    margin-top: 20px;
+  }
+}
+
+.realtime {
+  background: #eeeeee;
+
+  &-teaminfo {
+    display: flex;
+    justify-content: space-between;
+    margin-right: -10px;
+
+    &-card {
+      flex: 1;
+      margin-right: 10px;
+
+      &-data {
+        padding: 0; margin: 0;
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.45);
+        font-weight: bolder;
+        margin-left: 20px;
+      }
+    }
+
+    &-menu {
+      min-width: 150px;
+      max-height: 250px;
+      overflow: scroll;
+    }
+  }
+
+  &-hourChart {
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+  &-hourChart h3 {
+    margin: 0;
+    padding: 0;
+  }
+}

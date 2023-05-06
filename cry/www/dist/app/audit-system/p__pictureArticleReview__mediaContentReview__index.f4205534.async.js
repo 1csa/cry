@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[33],{VRrS:function(e,t,a){"use strict";a.r(t);var n=a("ERkP"),i=a.n(n),l=a("mRhe"),c=a("PR6E"),p="article",r=()=>i.a.createElement(l["default"],{contentType:p,initialValues:{material_type:[c["b"][p]],audit_level:1}});t["default"]=r}}]);

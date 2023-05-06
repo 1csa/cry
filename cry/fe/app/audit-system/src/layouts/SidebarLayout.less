@@ -1,0 +1,49 @@
+.sidebar-layout {
+  min-height: 100vh;
+
+  .main-content,
+  .main-content-with-page-header {
+    margin: 20px;
+    margin-bottom: 0;
+  }
+
+  .main-content {
+    overflow: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+
+    .ant-card {
+      &:not(.ant-card.index-card) {
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .yd-layout {
+    background: #e0e2e5;
+  }
+}
+
+.pag-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sider-trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #1890ff;
+  }
+}
+
+.ant-layout {
+  height: 100vh;
+}

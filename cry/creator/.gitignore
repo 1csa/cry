@@ -1,0 +1,6 @@
+node_modules
+**/.DS_Store
+.idea
+.vscode
+www/fe/node_modules
+www/fe/app/**/node_modules

@@ -1,0 +1,29 @@
+.article-main-content {
+  max-height: calc(100vh - 150px);
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  > div {
+    width: 33.333333%;
+    overflow-y: auto;
+    padding: 5px;
+    &:not(:last-child) {
+      border-right: solid 1px #ddd;
+    }
+    display: relative;
+  }
+}
+
+#ifr-article {
+  width: 100%;
+  padding: 0;
+  border: none;
+  margin: 0;
+  height: 85%;
+}
+
+.ifr-docid {
+  text-align: center;
+  margin: 5px 0 0;
+}

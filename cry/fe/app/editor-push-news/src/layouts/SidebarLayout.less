@@ -1,0 +1,37 @@
+.sidebar-layout {
+  height: 100%;
+  min-height: 100vh;
+  // margin-left: 220px;
+
+  .ant-layout-sider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0
+  }
+  .main-content, .main-content-with-page-header {
+    margin: 20px;
+  }
+
+  & &-main {
+    height: 100%;
+
+    &-content {
+      overflow: hidden;
+      margin: 8px 0;
+      background-color: #fff;
+    }
+  }
+}
+
+.sider-trigger {
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #1890ff;
+  }
+}

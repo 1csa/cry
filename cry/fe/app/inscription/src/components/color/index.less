@@ -1,0 +1,29 @@
+.ycolor {
+	position: relative;
+
+	&-preview {
+		width: 64px;
+		height: 24px;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-radius: 4px;
+	}
+
+	&-picker {
+    width: 100%;
+		position: absolute;
+		top: 30px;
+		z-index: 2;
+
+		&-hidden {
+			visibility: hidden;
+		}
+
+		&-cover {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+    }
+	}
+}

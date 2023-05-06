@@ -1,0 +1,92 @@
+.competitor {
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+
+  &-header {
+    height: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 8px;
+
+    & i {
+      margin-right: 8px;
+    }
+  }
+
+  &-content {
+    height: calc(100% - 32px);
+    width: 100%;
+    overflow-y: hidden;
+
+    & .ant-divider-horizontal {
+      margin: 12px 0;
+    }
+
+    & .ant-card-body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    & .ant-spin {
+      display: block;
+      margin: 48px auto;
+    }
+
+    & .monitor-list {
+      overflow-y: scroll;
+    }
+  }
+
+  &-screen {
+    &-op {
+      float: right;
+      margin-top: 8px;
+    }
+  }
+
+  &-screen .ant-form-item {
+    margin-bottom: 0px;
+  }
+
+  &-screen .ant-calendar-picker {
+    width: 100%!important;
+  }
+}
+
+.notification-message, .notification-descripton {
+  display: flex;
+
+  & p {
+    margin: 0;
+    padding: 0;
+  }
+  & span.label {
+    width: 48px;
+  }
+
+  & .content {
+    flex: 1;
+  }
+
+  & .content>p {
+    margin-bottom: 8px;
+  }
+}
+
+
+.notification-total {
+  height: 32px;
+  margin-bottom: -12px;
+
+  &>span:first-child {
+    margin-right: 6px;
+  }
+
+  &>span:last-child {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px; 
+  }
+}

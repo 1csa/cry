@@ -1,0 +1,170 @@
+@black: #000;
+
+.video-content {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.height-69 {
+  height: 69%;
+}
+
+.height-75 {
+  height: 75%;
+}
+
+.fb {
+  display: flex;
+}
+
+.video-left {
+  width: 51%;
+  padding-right: 2%;
+  border-right: 1px solid #ccc;
+  height: 100%;
+}
+
+[id='wrapper'] {
+  width: 100%;
+  // position: sticky!important;
+  top: 0;
+  left: 0;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.sc-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.video-right {
+  margin-left: 2%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: auto;
+
+  .img-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.f1 {
+  flex: 1;
+}
+
+.right-title {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pic-box {
+  position: relative;
+  margin-bottom: 32px;
+  width: calc(90% / 3);
+  margin-right: 22px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .img-x {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    background: #000;
+
+    &.danger-border {
+      position: relative;
+      border: 2px solid rgb(231, 16, 16);
+
+      .tips-icon-wrapper {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 10;
+        color: #ff4d4f;
+
+        .default {
+          color: #fff;
+        }
+
+        .warning {
+          color: #faad14;
+        }
+
+        .error {
+          color: #ff4d4f;
+        }
+      }
+    }
+  }
+
+  .cover-x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+}
+
+.xgplayer-is-fullscreen.xgplayer-skin-default {
+  .xgplayer-controls.xgplayer-controls {
+    background: @black;
+    bottom: 0;
+  }
+}
+
+.xgplayer-skin-default {
+  .xgplayer-controls.xgplayer-controls {
+    background: @black;
+    bottom: -60px;
+  }
+}
+
+.xgplayer-skin-default.xgplayer-skin-default .xgplayer-tips {
+  top: -42px;
+}
+
+.xgplayer-skin-default.xgplayer-inactive {
+  .xgplayer-controls.xgplayer-controls {
+    display: flex;
+  }
+}
+
+.xgplayer-skin-default.xgplayer-nostart {
+  .xgplayer-controls.xgplayer-controls {
+    display: flex;
+  }
+}
+
+.xgplayer-skin-default.xgplayer.xgplayer-ended {
+  .xgplayer-controls.xgplayer-controls {
+    display: flex;
+  }
+}
+
+.xgplayer-skin-default {
+  .xgplayer-progress.xgplayer-progress {
+    top: -20px;
+    left: 0;
+    background: @black;
+    width: 100%;
+  }
+}

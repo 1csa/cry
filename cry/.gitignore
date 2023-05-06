@@ -1,0 +1,19 @@
+**/node_modules
+.tern-project
+**/.DS_Store
+.idea
+runtime
+*.log
+*.log.*
+yarn.lock
+**/build
+!/fe/scaffold/build
+/app
+www/fe/node_modules
+www/fe/app/**/node_modules
+www/fe/experiment/**/node_modules
+.fecache
+.vscode
+
+# 脚手架保留字，本地测试专用，不需要提交
+/www/dist/app/simple-demo

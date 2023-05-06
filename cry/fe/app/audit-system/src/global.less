@@ -1,0 +1,111 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f0f2f5 !important;
+}
+
+&::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+&::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(158, 154, 154, 0.4);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background: rgba(158, 154, 154, 0.7);
+  }
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.mr40 {
+  margin-right: 40px;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+[name='ifr-article'] {
+  width: 100%;
+  padding: 0;
+  border: none;
+  margin: 0;
+  height: 100%;
+}
+
+[name='ifr-article-quality'] {
+  width: 100%;
+  padding: 0;
+  border: none;
+  margin: 0;
+  height: 100%;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.clamp3 {
+  max-width: 100px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

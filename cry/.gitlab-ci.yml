@@ -1,0 +1,84 @@
+#image: docker2.yidian.com:5000/centos/wemedia-node-6.3.1:20170531
+#image: docker2.yidian.com:5000/centos/node-wemedia-8.9:20180117
+
+variables:
+  # 基础镜像名
+  DOCKER_IMAGE_NAME: docker2.yidian.com:5000/webui/zeus:20210311
+  # 构建后的镜像名
+  #DEPLOY_DOCKER_NAME: harbor.int.yidian-inc.com/webui-$CI_PROJECT_NAME/webui-$CI_PROJECT_NAME-pipeline-$CI_PIPELINE_ID-image
+  DEPLOY_DOCKER_NAME: docker2.yidian.com:5000/publish/webui-$CI_PROJECT_NAME-pipeline-$CI_PIPELINE_ID-image
+  PORT: '5000'
+  PROJECT_NODE_MODULE_VER: 0
+
+image:
+  name: tico/docker:latest
+
+# 定义 stages
+stages:
+  #- install_deps
+  #- build
+  - assemble
+  - deploy
+  - over
+
+build_docker:
+  stage: assemble
+  before_script:
+    #- docker login -u harbor_ops -p pssreO3P2S1.,  harbor.int.yidian-inc.com
+  script:
+    - ls -la
+    - rm -rf fe
+    - echo "branch $CI_COMMIT_REF_NAME port $PORT"
+    - pwd
+    #- docker pull $DOCKER_IMAGE_NAME
+    - echo "FROM $DOCKER_IMAGE_NAME" > Dockerfile
+    - echo "WORKDIR /home/services" >> Dockerfile
+    - echo "COPY ./deploy/zeus.yidian-inc.com/ /home/services/zeus.yidian-inc.com/" >> Dockerfile
+    - echo "COPY . /home/services/zeus.yidian-inc.com/htdocs/" >> Dockerfile
+    - echo "RUN rm -rf /home/services/zeus.yidian-inc.com/htdocs/deploy" >> Dockerfile
+    - docker build -t $DEPLOY_DOCKER_NAME .
+    - docker push $DEPLOY_DOCKER_NAME
+  tags:
+    - 19_docker
+  when: manual
+  only:
+    - web
+
+deploy_test:
+  stage: deploy
+  dependencies:
+    - build_docker
+  script:
+    - export CONTAINER_NAME_PREFIX="webui-$CI_PROJECT_NAME-test-$PORT"
+    # 移除旧版本container
+    - bash deploy/remove_old_docker.sh $CONTAINER_NAME_PREFIX
+    - docker pull $DEPLOY_DOCKER_NAME
+    - docker run -d -t -i -e TZ=Asia/Shanghai --name $CONTAINER_NAME_PREFIX --net=host -p $PORT:$PORT $DEPLOY_DOCKER_NAME /bin/bash -c "cd /home/services/zeus.yidian-inc.com/ && sh start.sh testing $PORT"
+    #- bash deploy/check_port.sh $PORT
+  tags:
+    - 11_shell
+  environment:
+    name: test
+    url: http://venus.int.yidian-inc.com:$PORT
+  when: manual
+  only:
+    - web
+
+report_success:
+  stage: over
+  dependencies:
+    - deploy_test
+  script:
+    - sh deploy/dingdingrobot.sh "gitlab-ci pipeline【成功】" "#### 【$GITLAB_USER_NAME】 triggered pipeline [$CI_PROJECT_NAME - $CI_PIPELINE_ID]($CI_PROJECT_URL/pipelines/$CI_PIPELINE_ID) on branch [$CI_COMMIT_REF_NAME], Deployed to [http://venus.int.yidian-inc.com:$PORT](http://venus.int.yidian-inc.com:$PORT)"
+  tags:
+    - 19_shell
+  when: manual
+  only:
+    - web
+# report_error:
+#   stage: over
+#   script:
+#     - sh deploy/dingdingrobot.sh "gitlab-ci pipeline【失败】" "pipeline run failed：[$CI_PROJECT_NAME - $CI_PIPELINE_ID]($CI_PROJECT_URL/pipelines/$CI_PIPELINE_ID) "
+#   tags:
+#     - 10_103_35_79_shell
+#   when: on_failure

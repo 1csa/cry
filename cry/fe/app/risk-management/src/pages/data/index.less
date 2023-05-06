@@ -1,0 +1,79 @@
+.showDataCtn {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .showDataItem {
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    min-width: 150px;
+    margin-top: 10px;
+    &:hover {
+      box-shadow: 0 3px 8px #cdcfd2;
+    }
+    .text {
+      font-family: tapeworm;
+      color: #1890ff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .title {
+    }
+  }
+}
+.marginLeft24 {
+  margin-left: 24px;
+}
+.downLoadIcon {
+  font-size: 20px;
+  color: #1890ff;
+  vertical-align: middle;
+  margin-left: 8px;
+  margin-top: -2px;
+  cursor: pointer;
+}
+.topCtn {
+  padding-left: 24px;
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .subItem {
+    width: auto;
+    float: left;
+    margin-right: 40px;
+    min-height: 285px;
+  }
+}
+.spCollapseCtn {
+  .ant-collapse {
+    margin-top: -24px;
+    background-color: white;
+    border: none;
+    .ant-collapse-content {
+      border-top: none;
+    }
+    .ant-collapse-content-box {
+      padding-top: 0;
+    }
+    .ant-collapse-item {
+      border-bottom: none;
+    }
+  }
+}
+.mustFormCtn {
+  .ant-form-item-required {
+    &::before {
+      display: none;
+    }
+  }
+}

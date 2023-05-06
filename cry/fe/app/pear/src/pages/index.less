@@ -1,0 +1,80 @@
+.normal {
+  font-family: Georgia, sans-serif;
+  margin-top: 4em;
+  text-align: center;
+}
+
+.welcome {
+  height: 328px;
+  background: url(../assets/yay.jpg) no-repeat center 0;
+  background-size: 388px 328px;
+}
+
+.list {
+  font-size: 1.2em;
+  margin-top: 1.8em;
+  list-style: none;
+  line-height: 1.5em;
+}
+
+.list code {
+  background: #f7f7f7;
+}
+.main-content {
+  width: 100%;
+  height: 650px;
+  background-color: rgb(119, 209, 221);
+}
+
+.logo-box{
+  padding-top: 150px;
+  padding-left: 300px;
+  font-size: 0;
+  position: relative;
+}
+.logo-box div{
+  display: inline-block;
+}
+.logo-box .logo-text{
+  margin-left: 10px;
+}
+
+.logo-box .logo-text{
+  height: 40px;
+  animation: logoText 1s ease-in 3s;
+  animation-fill-mode:backwards;
+}
+
+.logo-box .logo2{
+  animation: logo2-middle 2s ease-in;
+
+}
+.logo-box .logo2 img{
+  animation: logo2-line 2s linear;
+}
+
+@keyframes logoText {
+  0%{
+      transform:translateX(50px);
+      opacity: 0;
+  }
+  100%{
+      transform:translateX(0);
+      opacity: 1;
+  }
+}
+@keyframes logo2-line {
+  0% { transform: translateX(200px)}
+  25% { transform: translateX(150px)}
+  50% { transform: translateX(100px)}
+  75% { transform: translateX(50px)}
+  100% { transform: translateX(0); }
+}
+
+@keyframes logo2-middle {
+  0% { transform: translateY(0);     }
+  25% { transform: translateY(-100px);     }
+  50% { transform: translateY(0);     }
+  75% { transform: translateY(-50px);     }
+  100% { transform: translateY(0); }
+}

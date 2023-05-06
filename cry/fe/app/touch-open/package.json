@@ -1,0 +1,48 @@
+{
+  "name": "touch-open",
+  "private": true,
+  "version": "0.5.0",
+  "scripts": {
+    "start": "vite --mode development",
+    "start:test": "vite --mode test",
+    "start:pre": "vite --mode pretest",
+    "start:prod": "vite --mode production",
+    "build:test": "vite build --mode test",
+    "build:pre": "vite build --mode pretest",
+    "build": "vite build --mode production",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/clipboard": "^2.0.7",
+    "ant-design-vue": "^3.2.11",
+    "axios": "^0.27.2",
+    "clipboard": "^2.0.11",
+    "compressorjs": "^1.1.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "html2canvas": "^1.4.1",
+    "js-cookie": "^3.0.1",
+    "pinia": "^2.0.18",
+    "sortablejs": "^1.15.0",
+    "vue": "3.2.37",
+    "vue-cropper": "^1.0.3",
+    "vue-router": "^4.1.3",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-html": "^0.2.4",
+    "@types/node": "^18.7.6",
+    "@types/qs": "^6.9.7",
+    "@types/sortablejs": "^1.13.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/compiler-sfc": "^3.2.37",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "less": "^4.1.3",
+    "prettier": "^2.7.1",
+    "qs": "^6.11.0",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.8",
+    "vue-tsc": "^0.40.1"
+  }
+}

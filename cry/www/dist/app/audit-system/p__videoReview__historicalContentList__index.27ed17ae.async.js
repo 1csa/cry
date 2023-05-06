@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[50],{Z3HG:function(e,t,a){"use strict";a.r(t);var n=a("ERkP"),i=a.n(n),r=a("E0ks"),s=a("SFsW"),o=()=>{var e="video";return i.a.createElement(r["default"],{initialValues:{material_type:[103]},contentType:e,filterOptions:{replaceFormItems:{index:-11,items:s["replaceFormItem"]}}})};t["default"]=o}}]);

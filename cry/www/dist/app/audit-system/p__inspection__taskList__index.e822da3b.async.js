@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[30],{HbDD:function(e,n,a){"use strict";a.r(n);var t=a("ERkP"),c=a.n(t),r=a("Pkk2"),s=()=>{return c.a.createElement("div",{className:"main-content"},c.a.createElement(r["a"],{from:"list"}))};n["default"]=s}}]);

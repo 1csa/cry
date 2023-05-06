@@ -1,0 +1,134 @@
+.main-panel-card {
+  width: 100%;
+  height: calc(100% - 110px);
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+
+  .card {
+    // padding: 24px;
+    background: #fff;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .main-panel-card-left {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-width: 75%;
+    height: 100%;
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .info {
+        margin-right: 30px;
+
+        .red-color {
+          color: #f00;
+        }
+      }
+    }
+
+    .student-head-part {
+      display: flex;
+      align-items: stretch;
+
+      h3 {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+        padding: 2px 0;
+        width: 50%;
+        overflow-x: hidden;
+        border: 1px solid #333;
+
+        .icon-wrapper {
+          &.none {
+            visibility: hidden;
+          }
+
+          .icon {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .student-main {
+      display: flex;
+      align-items: stretch;
+
+      .content {
+        padding: 10px;
+        width: 50%;
+        border: 1px dashed #333;
+        border-top: none;
+
+        .image-rotate-wrapper {
+          transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+        }
+      }
+    }
+  }
+
+  .main-panel-card-right {
+    width: 25%;
+    max-width: 25%;
+    overflow-y: auto;
+
+    .btns-wrapper {
+      .ant-btn {
+        &:hover {
+          color: #ff7875;
+          border-color: #ff7875;
+        }
+        &:focus {
+          color: rgba(0, 0, 0, 0.85);
+          border-color: #d9d9d9;
+        }
+      }
+
+      .ant-btn-dangerous.ant-btn-primary {
+        color: #fff !important;
+      }
+    }
+
+    .btn-action {
+      margin: 20px 0;
+
+      .ant-btn.ignore-feedback {
+        margin-left: 10px;
+        color: #99ff66;
+        border-color: #99ff66;
+
+        &:focus,
+        &:hover {
+          border-color: #99ff66;
+        }
+      }
+    }
+
+    .user-info {
+      margin-bottom: 20px;
+
+      .title {
+        margin-bottom: 3px;
+        font-weight: bold;
+      }
+
+      .avatar-wrapper {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.cardform {
+  height: calc(100% - 36px);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  overflow: scroll;
+  margin-top: 12px;
+
+  h3 {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 16px;
+  }
+
+  h5.child_h5 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 18px 0;
+  }
+
+  &-form {
+    &-style {
+      .labels-item {
+        display: inline-block;
+        width: 36px;
+        text-align: center;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+    }
+
+    &-operation {
+      text-align: center;
+
+      .item:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .cardchild {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+
+      & h5 {
+        font-size: 14px;
+      }
+    }
+
+    &-header > button:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    & .ant-picker {
+      width: 100%;
+    }
+  }
+}
+
+.cardlist {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+
+    h3 span:first-child {
+      margin-right: 8px;
+    }
+
+    &-operation button:first-child {
+      margin-right: 12px;
+    }
+  }
+
+  &-list {
+    &-operation button:first-child {
+      margin-left: 0;
+    }
+    &-operation button {
+      padding-right: 0;
+    }
+  }
+}
+
+.cardscreen {
+  padding: 8px 6px;
+
+  &-header {
+    margin-bottom: 16px;
+  }
+
+  &-footer {
+    text-align: right;
+  }
+}

@@ -1,0 +1,344 @@
+@colord9: #d9d9d9;
+@colorf0: #f0f0f0;
+@margin20: 20px;
+
+@items: 1,
+  2,
+  3,
+  4,
+  5,
+  null;
+
+@cellItem: {
+  1: #fff1f0;
+  2: #fff7e6;
+  3: #e6fffb;
+  4: #90bdeb;
+  5: #bed481;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 10px;
+}
+
+.cell-style {
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.init-cell-style {
+  .cell-style();
+  border: 1px solid @colord9;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  border-bottom: none;
+  border-right: none;
+}
+
+.flex-hor-center {
+  display: flex;
+  align-items: center;
+}
+
+.border-b-r-none {
+  border-bottom: none;
+  border-right: none;
+}
+
+.ant-table-tbody() {
+  .ant-table-row {
+    .ant-table-cell {
+      &:nth-child(5) {
+        padding: 0;
+      }
+
+      .aggregate-data {
+        .group-item {
+          border-bottom: 1px solid @colorf0;
+          display: flex;
+
+          &:last-child {
+            border: none;
+          }
+
+          .action-type {
+            .flex-hor-center();
+            width: 100px;
+            padding: 10px;
+            border-right: 1px solid @colorf0;
+          }
+
+          .sub-bus-item {
+            flex: 1;
+
+            .sub-buisness {
+              padding: 16px;
+              padding-bottom: 10px;
+              border-bottom: 1px solid @colorf0;
+
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.audit-word-management {
+  background-color: #fff;
+
+  .awm-tab {
+    .card {
+      margin-bottom: @margin20;
+    }
+
+    .ant-form-item {
+      min-width: 260px;
+      margin-bottom: 10px;
+
+      &:first-child {
+        min-width: 120px;
+      }
+
+      &:nth-child(5) {
+        min-width: 220px;
+      }
+
+      &:last-child {
+        .ant-btn:first-child {
+          margin-right: @margin20;
+        }
+      }
+    }
+
+    .awm-search,
+    .ope-panel {
+      margin-bottom: @margin20;
+
+      .icon {
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    #customize-audit-word-table {
+      .ant-table-tbody;
+    }
+  }
+}
+
+.audit-words-setting {
+
+  .ant-form-item-label {
+    .flex-hor-center();
+    text-align: left;
+  }
+
+  .fix-btn {
+    width: 100%;
+    .flex-hor-center();
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+  }
+
+  #customize-audit-word-table {
+    .ant-table-tbody;
+  }
+
+}
+
+#horizontal_search_setting_form {
+  width: 100%;
+  margin-bottom: @margin20;
+
+  .ant-form-item-label {
+    &>label[title='生效信息']::before {
+      display: inline-block;
+      margin-right: 4px;
+      color: #ff4d4f;
+      font-size: 14px;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: '*';
+    }
+  }
+
+  .question-icon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+}
+
+.cus-table {
+  overflow-x: auto;
+
+  .title {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    border: 1px solid @colord9;
+    .border-b-r-none ();
+    background: #fafafa;
+    .flex-hor-center();
+
+    .row-title {
+      .cell-style();
+      border-right: 1px solid @colord9;
+    }
+  }
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .table-content {
+    display: flex;
+    border-right: 1px solid @colord9;
+    border-bottom: 1px solid @colord9;
+
+    .cell-label {
+      background: #fafafa;
+    }
+
+    .cell {
+      // width: 660px;
+      display: grid;
+      // grid-template-columns: repeat(8, minmax(100px, 1fr));
+
+      each(@items, {
+          .cell-item-@{value} {
+            cursor: pointer;
+            font-weight: normal;
+
+            &:hover {
+              background: #fafafa;
+            }
+
+          }
+
+          .cell-item-@{value} {
+            .init-cell-style()
+          }
+
+        }
+
+      );
+
+      each(@cellItem, {
+          .cell-item-@{key} {
+            background: @value
+          }
+        }
+
+      )
+    }
+  }
+
+  .col-title {
+    .init-cell-style()
+  }
+}
+
+.label-width {
+  max-width: calc(100% / 24 * 2);
+  flex: 0 0 calc(100% / 24 * 2);
+  width: calc(100% / 24 * 2);
+}
+
+.dib {
+  display: inline-block;
+}
+
+.steps {
+  .fix-input-button {
+    margin-right: @margin20;
+  }
+
+  input[name='uploadExcel'] {
+    display: none;
+  }
+
+
+  .upload-panel,
+  .parse-data-table,
+  .connect-business {
+    .mb10();
+
+    .title {
+      display: flex;
+
+      .title-label {
+        .label-width();
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .danger-text {
+        color: red;
+      }
+
+      .danger-text::before {
+        display: inline-block;
+        margin-right: 4px;
+        color: #ff4d4f;
+        font-size: 14px;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+        content: '*';
+      }
+    }
+  }
+
+  .connect-business {
+    .flex-hor-center();
+    justify-content: flex-start;
+  }
+
+  .ant-card-body,
+  .step-panel {
+    height: 100%;
+  }
+
+  .step-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .upload-loading {
+    flex: 1;
+  }
+
+  .steps-action {
+    margin: @margin20 0;
+  }
+}
+
+.success-tips {
+  .title {
+    text-align: left;
+    margin: @margin20 0 10px 0;
+  }
+}
+
+.success {
+  .icon {
+    transform: scale(10);
+  }
+
+  text-align: center;
+  max-height: 400px;
+  line-height: 400px;
+  height: 400px;
+}

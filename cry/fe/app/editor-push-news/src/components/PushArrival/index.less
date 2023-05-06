@@ -1,0 +1,48 @@
+.image-preview {
+  &-small {
+    padding-top: 8px;
+    display: flex;
+
+    & span {
+      margin-right: 8px;
+      width: 72px;
+    }
+
+    & img {
+      width: 150px;
+    }
+  }
+}
+.title {
+  display: flex;
+  max-width: 840px;
+  flex-wrap: wrap;
+
+  img {
+    max-width: 100px;
+    max-height: 75px;
+  }
+
+  .cximg {
+    margin: 5px;
+
+    :hover {
+      transition: all .2s ease-in-out;
+      position: relative;
+      transform: scale(2);
+      z-index: 100;
+    }
+  }
+}
+
+.imgtitle {
+  display: flex;
+
+  img {
+    margin: 0 5px;
+    // max-width: 100px;
+    max-height: 75px;
+    object-fit: contain;
+  }
+}
+

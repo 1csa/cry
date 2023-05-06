@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "eslint-config-think",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier"],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "allowImportExportEverywhere": false
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "strict": [2, "global"],
+    "no-console": 0,
+    "getter-return": 0,
+    "for-direction": 0
+  },
+  "globals": {
+    "Promise": true
+  }
+}

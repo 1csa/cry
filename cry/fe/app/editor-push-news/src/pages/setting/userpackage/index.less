@@ -1,0 +1,82 @@
+.userpackage {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  width: 100%;
+  padding: 0 12px 0 0;
+  background: #f0f2f5;
+  &-search {
+    margin-bottom: 10px;
+    & .ant-card-body {
+      padding: 24px;
+    }
+    .ant-select-disabled .ant-select-selection {
+      background: #ffffff;
+    }
+    .search-btn[disabled] {
+      background: rgba(24, 144, 255, 0.5);
+      color: #ffffff;
+      border: none;
+    }
+  }
+  &-content {
+    overflow-y: scroll;
+    flex: auto;
+    min-height: 0;
+    // margin-bottom: 10px;
+    background: #ffffff;
+    // padding: 10px 0;
+    .result-info {
+      margin-top: 10%;
+    }
+    .ant-result-title {
+      color: #9e9e9e;
+    }
+    & .ant-card-body {
+      height: 100%;
+    }
+    & .ant-table-wrapper,
+    .ant-spin-nested-loading,
+    .ant-spin-container,
+    .ant-table,
+    .ant-table-content,
+    .ant-table-scroll {
+      height: 100%;
+    }
+    & .ant-table-body {
+      max-height: calc(100% - 54px) !important;
+    }
+  }
+  &-footer {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    height: 50px;
+    background: #ffffff;
+    // margin-top: 5px;
+
+    .footer-fixed {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      box-shadow: 0px -10px 10px -15px #000;
+    }
+    .ant-col  {
+      margin-left: 20px;
+    }
+  }
+  .ant-tag-checkable {
+    line-height: 26px;
+    border: 1px solid #d9d9d9;
+    padding: 0 14px;
+  }
+  .ant-tag-checkable-checked {
+    background-color: #1890ff;
+    border-color: #1890ff;
+  }
+  .user-tag-tip {
+    position: absolute;
+    font-size: 12px;
+    line-height: normal;
+  }
+}

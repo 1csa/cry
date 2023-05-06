@@ -1,0 +1,21 @@
+{
+  "apps": [{
+      "name"        : "zeus",
+      "script"      : "production.js",
+      //"args"        : ["--toto=heya coco", "-d", "1"],
+      "watch"       : false,
+      //"ignore_watch" : ["node_modules", "client", "bin", "build"],
+      //"node_args"   : "--harmony",
+      //"merge_logs"  : true,
+      "log_date_format" : "YYYY-MM-DD HH:mm Z",
+      "cwd"         : "/home/services/zeus.yidian-inc.com/htdocs",
+      // "exec_mode"   : "cluster",
+      // "instances"   : 2,
+      "error_file"  : "/home/services/zeus.yidian-inc.com/logs/zeus.err.log",
+      "out_file"  : "/home/services/zeus.yidian-inc.com/logs/zeus.out.log",
+      "max_memory_restart": "2G",
+      "env": {
+          "NODE_ENV": "production"
+      }
+  }]
+}

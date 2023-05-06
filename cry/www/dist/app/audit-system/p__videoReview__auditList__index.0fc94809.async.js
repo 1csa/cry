@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[49],{"6GOH":function(e,t,a){"use strict";a.r(t);var n=a("ERkP"),i=a.n(n),o=a("+vy+"),r=a("PR6E"),u=()=>{var e="video",t="/videoReview/mediaContentReview";return i.a.createElement(o["default"],{contentType:e,routePath:t,initialValues:{material_type:[r["b"][e]],status:[3010]}})};t["default"]=u}}]);

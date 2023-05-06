@@ -1,0 +1,67 @@
+
+.cutter {
+  & &-operation, & &-bottom {
+    display: flex;
+
+    &>button {
+      margin-left: 12px;
+    }
+  }
+
+  &-picture {
+    margin-bottom: 5px;
+
+    img {
+      max-width: 150px;
+      max-height: 100px;
+    }
+
+    .cximg {
+      margin: 0 5px;
+      // border: 1px dashed rgb(55, 56, 58);
+    }
+
+    .pic {
+      display: flex;
+      overflow-x: scroll;
+    }
+  }
+
+  & &-bottom {
+    justify-content: center;
+  }
+
+  & .ant-divider {
+    margin: 8px 0;
+  }
+
+  &-editor {
+    display: flex;
+    align-items: center;
+
+    & &-check {
+      width: 144px;
+    }
+
+    & &-operation {
+      margin-left: 12px;
+      width: 48px;
+
+      & .ant-slide {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    & &-preview {
+      width: 216px;
+      height: 132px;
+      padding: 12px;
+      margin-left: 12px;
+    }
+  }
+
+  &-editor:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}

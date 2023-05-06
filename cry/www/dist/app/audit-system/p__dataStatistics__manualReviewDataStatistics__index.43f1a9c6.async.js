@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[15],{"7IfW":function(t,n,o){"use strict";o.r(n);var a=o("ERkP"),e=o.n(a),c=o("GYqz"),s=o("Dfax"),i=()=>{return e.a.createElement(s["a"],{theSecondExportBtn:!0,columnsTotal:c["columnsTotal"],columnsPartition:c["columnsPartition"],panelStatistics:[]})};n["default"]=i}}]);

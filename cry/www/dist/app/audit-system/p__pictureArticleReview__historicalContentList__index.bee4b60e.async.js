@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[31],{"m+l6":function(e,t,a){"use strict";a.r(t);var n=a("ERkP"),i=a.n(n),r=a("E0ks"),l=a("7gAR"),p="article",s=()=>{return i.a.createElement(r["default"],{initialValues:{material_type:[102]},contentType:p,filterOptions:{replaceFormItems:{index:-10,items:l["replaceFormItem"]}}})};t["default"]=s}}]);

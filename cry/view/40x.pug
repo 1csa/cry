@@ -1,0 +1,39 @@
+doctype
+html
+  head
+    meta(http-equiv="Content-type", content='text/html; charset=utf-8')
+    title #{pageCode}
+    style(type="text/css").
+      html, body {
+        height: 100%;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+      }
+      .center-img {
+        width: 500px;
+      }
+      .center-text {
+        text-align: center;
+      }
+  body
+    div.container
+      img.center-img(src="https://si1.go2yd.com/get-image/0lc44M4XtD6")
+      h3.center-text 哇哦～～ darling，您暂时无法访问哦～
+      if pageCode === '404'
+        h3.center-text 请查看工具地址输入是否正确
+      if pageCode === '403'
+        h3.center-text 请查看是否正确拥有工具权限 或者 是否已经登陆过了pandora后台
+      a.center-text(href="http://pandora.yidian-inc.com/") 返回pandora工具平台
+
+
+block scripts
+    script(type="text/javascript").
+      setTimeout(function(){
+         location.href='http://pandora.yidian-inc.com'
+      }, 1500)
+

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "ESNext",
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "Node",
+    "suppressImplicitAnyIndexErrors": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "strict": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+  },
+  "exclude": ["node_modules"],
+}

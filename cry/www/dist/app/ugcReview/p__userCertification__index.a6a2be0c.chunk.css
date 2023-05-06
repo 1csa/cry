@@ -1,0 +1,1 @@
+.flex-box{display:flex;align-items:center;justify-content:center}.ant-modal-content #certModalForm label[title]:before{content:"";margin-right:10px}.ant-modal-content #certModalForm label[title=uid]:before,.ant-modal-content #certModalForm label[title=称号]:before{content:"*";margin-right:10px;color:red}

@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[13],{"21bP":function(e,t,a){"use strict";a.r(t);var n=a("ERkP"),i=a.n(n),r=a("mRhe"),l=a("PR6E"),u=()=>{var e="userprofile";return i.a.createElement(r["default"],{contentType:e,initialValues:{material_type:[l["b"][e]],audit_level:1}})};t["default"]=u}}]);

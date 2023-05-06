@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[14],{fDAB:function(t,n,a){"use strict";a.r(n);var o=a("ERkP"),e=a.n(o),s=a("Dfax"),c=a("5v0B"),i=a("Nrem"),l=()=>{return e.a.createElement(s["a"],{columnsTotal:c["columnsTotal"],columnsPartition:c["columnsPartition"],panelStatistics:i["default"]})};n["default"]=l}}]);

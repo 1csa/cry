@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[5],{"5Y9T":function(e,n,a){"use strict";a.r(n);a("M6c6");var t=a("jMRu"),r=a("ERkP"),c=a.n(r);n["default"]=(()=>{return c.a.createElement(c.a.Fragment,null,c.a.createElement("div",{className:"main-content"},c.a.createElement(t["a"],{bordered:!1,style:{minHeight:380}},"\u9ed1\u767d\u540d\u5355\u7ba1\u7406")))})}}]);
